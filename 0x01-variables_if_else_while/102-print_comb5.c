@@ -11,7 +11,7 @@ int main(void)
 	int li = 0;
 	int ri = 0;
 
-	while (li < 99)
+	while (li < 100)
 	{
 		while (ri < 100)
 		{
