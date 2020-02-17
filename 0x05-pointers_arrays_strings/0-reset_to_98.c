@@ -3,6 +3,7 @@
 /**
  * reset_to_98 - reset value to 98
  *
+ * @n: value to change
  * Return: void
  */
 
