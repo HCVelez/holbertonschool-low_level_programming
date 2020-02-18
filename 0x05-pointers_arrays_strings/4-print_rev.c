@@ -1,4 +1,4 @@
-k#include "holberton.h"
+#include "holberton.h"
 
 /**
  * print_rev - print a string in reverse
@@ -15,7 +15,7 @@ void print_rev(char *s)
 	;
 	len--;
 
-	while (len >= 0)
+	while (len > 0)
 	{
 		_putchar(s[--len]);
 	}
