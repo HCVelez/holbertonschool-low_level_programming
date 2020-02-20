@@ -3,8 +3,8 @@
 /**
  * _strcat - function to cat 2 strings
  *
- *@dest: destination string
- *@src: source of string to cat
+ * @dest: destination string
+ * @src: source of string to cat
  * Return: pointer to new string
  */
 
@@ -12,10 +12,10 @@ char *_strcat(char *dest, char *src)
 {
 	char *beg = dest;
 
-	while(*dest)
+	while (*dest)
 		dest++;
 
-	while(*src)
+	while (*src)
 	{
 		*dest = *src;
 		src++;
