@@ -21,7 +21,7 @@ char *leet(char *s)
 			if (s[index] == let[test]
 				s[index] = swap[test];
 		index++;
-		test++
+		test++;
 		}
 	}
 
