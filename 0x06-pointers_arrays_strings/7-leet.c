@@ -15,9 +15,9 @@ char *leet(char *s)
 
 	for (count = 0; s[count] != '\0'; count++)
 	{
-		for (index = 0; let[index] != '\0'; index++)
+		for (index = 0; let[index]; index++)
 		{
-			if (s[index] == let[count])
+			if (s[count] == let[index])
 				s[count] = swap[index];
 		}
 	}
