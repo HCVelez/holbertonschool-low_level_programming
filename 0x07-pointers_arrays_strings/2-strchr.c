@@ -18,5 +18,5 @@ char *_strchr(char *s, char c)
 			return (find);
 		find++;
 	}
-	return (NULL);
+	return (0);
 }
