@@ -1,7 +1,7 @@
 #include "holberton.h"
-
 /**
  * is_letter - function to test if given char is a letter
+ *
  *
  * @s: char to test
  * Return: 1 if letter 0 if not
@@ -26,6 +26,7 @@ int is_letter(char *s)
 
 int is_separator(char *s)
 {
+	s = s - 1;
 	switch (*s)
 	{
 		case ' ':
@@ -58,13 +59,14 @@ char *cap_string(char *s)
 {
 	char *tmp = s;
 	int islet = is_letter(tmp);
-	int sep = is_separator(tmp - 1);
+	int sep = is_separator(tmp);
 
 	while (*tmp)
 	{
-		if (islet == 1 && sep == 1)
+		if (islet == 1)
 		{
-			*tmp = (*tmp + 32);
+			if (sep == 1)
+				*tmp -= 32;
 		}
 		tmp++;
 	}

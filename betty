@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+/**
+ * func_name - description
+ *
+ * Return: always 0
+*/
+
+void func_name(void)
+{
+
+}
