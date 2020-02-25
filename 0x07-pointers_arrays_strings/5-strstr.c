@@ -21,17 +21,16 @@ char *_strstr(char *haystack, char *needle)
 			hold = trav;
 			while (needle[check] == *trav)
 			{
-				if (*trav != needle[check])
-				{
-					check = 0;
-					trav = hold + 1;
-					break;
-				}
 				trav++;
 				check++;
 			}
 			if (needle[check] == '\0')
 				return (hold);
+			else if (*trav != needle[check])
+			{
+				check = 0;
+				trav = hold + 1;
+			}
 		}
 		trav++;
 	}
