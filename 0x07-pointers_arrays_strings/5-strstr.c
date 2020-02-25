@@ -14,26 +14,26 @@ char *_strstr(char *haystack, char *needle)
 	char *trav = haystack;
 	char *hold;
 
-	while (*trav++)
+	while (*trav)
 	{
 		if (*trav == needle[check])
 		{
-			hold = trav + 1;
-			while (needle[check])
+			hold = trav;
+			while (needle[check] == *trav)
 			{
 				if (*trav != needle[check])
 				{
 					check = 0;
-					trav = hold;
+					trav = hold + 1;
 					break;
 				}
-				else if (needle[check])
-					return (trav);
-
 				trav++;
 				check++;
 			}
+			if (needle[check] == '\0')
+				return (hold);
 		}
+		trav++;
 	}
 	return (0);
 }
