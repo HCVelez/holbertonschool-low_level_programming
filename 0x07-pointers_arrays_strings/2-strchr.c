@@ -12,12 +12,12 @@ char *_strchr(char *s, char c)
 {
 	char *find = s;
 
-	while (*find++ && c != '\0')
+	while (*find++)
 	{
 		if (*find == c)
 			return (find);
 		else if (*find == '\0')
-			return (0);
+			return (find);
 	}
 	return (find);
 }
