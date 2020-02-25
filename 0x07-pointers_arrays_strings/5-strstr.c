@@ -19,7 +19,7 @@ char *_strstr(char *haystack, char *needle)
 		if (*trav == needle[check])
 		{
 			hold = trav + 1;
-			while (needle[check] != '\0') 
+			while (needle[check])
 			{
 				if (*trav != needle[check])
 				{
@@ -27,9 +27,11 @@ char *_strstr(char *haystack, char *needle)
 					trav = hold;
 					break;
 				}
-				else if (needle[check] == '\0')
+				else if (needle[check])
 					return (trav);
+
 				trav++;
+				check++;
 			}
 		}
 	}
