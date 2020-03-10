@@ -21,18 +21,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 
 	dogname = _strdup(name);
-	if (!dogname)
-	{
-		free(dogname);
-		free(dog);
-		return (NULL);
-	}
-
 	dogowner = _strdup(owner);
-	if (!dogowner)
+
+	if (!dogowner || !dogname)
 	{
-		free(dogname);
 		free(dogowner);
+		free(dogname);
 		free(dog);
 		return (NULL);
 	}
@@ -63,11 +57,11 @@ char *_strdup(char *str)
 	while (str[len++])
 	;
 
-	dest = malloc(len + 1);
+	dest = malloc(sizeof(char) * len);
 	if (!dest)
 		return (NULL);
 
-	while (index < len)
+	while (str[index])
 	{
 		dest[index] = str[index];
 		index++;
