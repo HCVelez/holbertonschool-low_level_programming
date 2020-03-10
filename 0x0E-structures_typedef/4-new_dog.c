@@ -57,18 +57,15 @@ char *_strdup(char *str)
 	while (str[len++])
 	;
 
-	dest = malloc(sizeof(char) * len);
+	dest = malloc(sizeof(char) * len + 1);
 	if (!dest)
 		return (NULL);
 
-	while (str[index])
+	while (index < len)
 	{
 		dest[index] = str[index];
 		index++;
 	}
 
-	if (dest[index] == '\0')
-		return (dest);
-
-	return (NULL);
+	return (dest);
 }
