@@ -63,11 +63,11 @@ char *_strdup(char *str)
 	while (str[len++])
 	;
 
-	dest = malloc(len);
+	dest = malloc(len + 1);
 	if (!dest)
 		return (NULL);
 
-	while (str[index])
+	while (index < len)
 	{
 		dest[index] = str[index];
 		index++;
