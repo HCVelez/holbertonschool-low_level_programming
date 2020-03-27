@@ -20,7 +20,7 @@ unsigned int binary_to_uint(const char *b)
 			conv = conv * 2 + 1;
 		else if (b[index] == '0')
 			conv *= 2;
-		else 
+		else
 			return (0);
 		index++;
 	}
