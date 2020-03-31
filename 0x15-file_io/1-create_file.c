@@ -11,17 +11,20 @@ int create_file(const char *filename, char *text_content)
 {
 	int nfcheck, len = 0, wrcheck;
 
-	if (!filename || !text_content)
+	if (!filename)
 		return (-1);
 
 	nfcheck = open(filename, O_RDWR | O_TRUNC | O_CREAT, S_IRUSR | S_IWUSR);
 	if (nfcheck == -1)
 		return (-1);
-		
-	while (text_content[len])
-		len++;
 
-	wrcheck = write(nfcheck, text_content, len);
+	if (text_content)
+	{
+		while (text_content[len])
+			len++;
+
+		wrcheck = write(nfcheck, text_content, len);
+	}
 	close(nfcheck);
 	if (wrcheck != len)
 		return (-1);
