@@ -24,7 +24,7 @@ void file_copy(int src_fd, int dst_fd, char *src, char *dst)
 			close(dst_fd);
 			exit(98);
 		}
-		
+
 		wrcheck = (dst_fd, buff, rdcheck);
 		if (wrcheck == -1)
 		{
@@ -45,5 +45,5 @@ void file_copy(int src_fd, int dst_fd, char *src, char *dst)
 
 int main(int argc, char *argv[])
 {
-
+	return (0);
 }
